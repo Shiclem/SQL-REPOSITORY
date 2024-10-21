@@ -8,8 +8,13 @@ SQL provides a number of operations that enable users to read, manipulate, and a
 - Postgresql
 - Msaccess
 - SQL Server , use SQL as their database language
+- SQL allows users to query the database in a number of ways, using English statements.
+- RDBMS is for storing, querying, retrieving and managing data.
 
-  
+# How database store data in a structure: 
+- create table which are composed of rows and columns, each table represent a specific type of data and each row or record in the table represents a single entry.
+
+The columns or field define the attributes of the data , such as a customer's name, age , or account number. Tables in database have rows and columns just like excel. 
 
   
 
