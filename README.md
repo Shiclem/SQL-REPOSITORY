@@ -25,8 +25,8 @@ Database tables for instance are organized by columns, Each column must have a u
 - it can perform various tasks like create a table, add data to tablets, drop the table, modify the table set permission for users.
 
   # TO CREATE TABLE
-  ```
-CREATE TABLE Students (
+  
+~~~CREATE TABLE Students (
   StudentID INT PRIMARY KEY,
   FirstName VARCHAR(50) NOT NULL,
   LastName VARCHAR(50) NOT NULL,
@@ -36,10 +36,9 @@ CREATE TABLE Students (
   Course VARCHAR(50),
   Department VARCHAR(50),
   CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
+);~~~
 
-# Explanation 
+###Explanation 
 
 - `StudentID`: Unique identifier for each student (Primary Key).
 - `FirstName` and `LastName`: Student's name.
@@ -49,7 +48,7 @@ CREATE TABLE Students (
 - `Course` and `Department`: Student's course and department.
 - `CreatedAt`: Timestamp for when the record was created.
 
- # TYPES OF COMMANDS
+ #TYPES OF COMMANDS
 
 ## Five type of SQL commnads
 
@@ -59,10 +58,10 @@ CREATE TABLE Students (
 - TCL: Transaction control language _used to manage transactions in the database
 - DQL: Data query language_ is used to fetch the data from the database ( select) to retrieve
 
-~~~SQL
+~~~
   SELECT * FROM TABLE1
   WHERE CONDITION = TRUE
-  ~~~
+~~~
   
 SQL Data types
 - Binary _ yes or no
