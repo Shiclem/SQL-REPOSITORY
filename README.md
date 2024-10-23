@@ -26,7 +26,8 @@ Database tables for instance are organized by columns, Each column must have a u
 
   # TO CREATE TABLE
   
-~~~CREATE TABLE Students (
+~~~
+CREATE TABLE Students (
   StudentID INT PRIMARY KEY,
   FirstName VARCHAR(50) NOT NULL,
   LastName VARCHAR(50) NOT NULL,
@@ -35,10 +36,10 @@ Database tables for instance are organized by columns, Each column must have a u
   Gender VARCHAR(10),
   Course VARCHAR(50),
   Department VARCHAR(50),
-  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);~~~
+  CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+~~~
 
-###Explanation 
+### Explanation 
 
 - `StudentID`: Unique identifier for each student (Primary Key).
 - `FirstName` and `LastName`: Student's name.
@@ -48,7 +49,7 @@ Database tables for instance are organized by columns, Each column must have a u
 - `Course` and `Department`: Student's course and department.
 - `CreatedAt`: Timestamp for when the record was created.
 
- #TYPES OF COMMANDS
+ # TYPES OF COMMANDS
 
 ## Five type of SQL commnads
 
@@ -63,7 +64,7 @@ Database tables for instance are organized by columns, Each column must have a u
   WHERE CONDITION = TRUE
 ~~~
   
-SQL Data types
+# SQL Data types
 - Binary _ yes or no
 - Numeric _ is most widely used datatype in sql ; numeric value only.
 - Date or daytime _ are used to be stored in date.
@@ -80,14 +81,155 @@ In sql keys are special field in a table that helps
 - primary key
 - super key
 - candidate key
-- surogate key. 
+- surogate key.
+
+  primary key must be declare before execute ( syntax word is identity)
+  Identity - Auto create increasing the primary key.
+  decimal - is to store exact numerical value.
+
+  # GROUP BY`
+   is a clause used to:
+- Divide data into groups based on one or more columns.
+-  Aggregate data within each group.
+
+## Purpose
+
+- Summarize data
+- Perform calculations on groups
+- Identify trends and patterns
+
+### Syntax
+
+`SELECT column1, column2, ...`
+`FROM tablename`
+`GROUP BY column1, column2, ...;`
+
+### How it works
+
+- SQL selects data from the table.
+- Groups data based on specified columns.
+- Applies aggregate functions (e.g., SUM, COUNT, AVG) to each group.
+
+### Common aggregate functions
+
+- SUM
+- COUNT
+- AVG (average)
+- MAX
+- MIN
+- GROUPING SETS
+
+### Example
+
+`SELECT Department, AVG(Salary) AS AverageSalary`
+`FROM Employees`
+`GROUP BY Department;`
+
+### Result
+
+| Department | AverageSalary |
+| --- | --- |
+| Sales | 50000 |
+| Marketing | 60000 |
+| IT | 70000 |
+
+### Having 
+
+HAVING is a clause used to:
+
+- Filter groups based on aggregate conditions.
+- Apply conditions to grouped data.
+
+### Syntax
+
+`SELECT column1, column2, ...`
+`FROM tablename`
+`GROUP BY column1, column2, ...`
+`HAVING condition;`
+
+### purpose
+
+- Filter groups based on aggregate values (e.g., SUM, COUNT, AVG).
+- Narrow down results to specific groups.
+
+### Examples
+
+- Filter groups with average salary > 50000:
+
+`SELECT Department, AVG(Salary) AS AverageSalary`
+`FROM Employees`
+`GROUP BY Department`
+`HAVING AVG(Salary) > 50000;`
+
+1. Find departments with > 5 employees:
+
+`SELECT Department, COUNT(*) AS EmployeeCount`
+`FROM Employees`
+`GROUP BY Department`
+`HAVING COUNT(*) > 5;
+
+### order by 
+Ascending and descending order. 
+
+### union 
+remove duplicate 
+
+### union all 
+execute all with duplicate 
+
+### comparison relation operator
+<= less than 
+>= greater than
+<> not equal
+
+### To join table 
+Inner join 
+Left join 
+Right join 
+Full join 
+This has to do with joining multiple tables to return in a single columns. 
+
+### SQL view 
+
+virtual table, that is created based on the result set of a sql query. 
+
+### Creating a View
+
+`CREATE VIEW view_name AS`
+`SELECT column1, column2, ...`
+`FROM tablename;`
+
+### Example
+
+`CREATE VIEW EmployeeInfo AS`
+`SELECT FirstName, LastName, Department`
+`FROM Employees;`
+
+### CASE WHEN STATEMENT 
+
+Conditional expression that allow to create different output based on certain condition. 
+
+### Syntax
+
+`CASE`
+`WHEN condition1 THEN result1`
+`WHEN condition2 THEN result2`
+`...`
+`ELSE default_result`
+`END`
+
+### Formula Logic
+
+- Evaluate conditions from top to bottom.
+- Return result for first true condition.
+- If no conditions are true, return default_result (ELSE clause).
+
+### Key points 
+- Flexibility
+- Readability
+- Efficiency 
 
 
-- GITHub for portfolio building
 
- 
-
-  
-  ''' SQL'''
 
   
