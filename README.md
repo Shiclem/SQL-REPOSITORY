@@ -1,17 +1,19 @@
 # SQL-REPOSITORY
 
 # SQL- Structured query language for querying of Data 
-SQL provides a number of operations that enable users to read, manipulate, and alter data. SQL is widely used by engineers in software development, This is important for everybody not only data analyst,data developer, data engineering, database adminstrator use sql. it is used for storing, retriving, managing data,in relational database management system (RDMBS).
 
-## TYPE OF RDMBS
+SQL provides a number of operations that enable users to read, manipulate, and alter data. SQL is widely used by engineers in software development, This is important for everybody not only data analyst,data developer, data engineering, database adminstrator use sql. it is used for storing, retriving, managing data,in relational database management system (RDMBS).
+..........
+# TYPE OF RDMBS
 - Mysql
 - Postgresql
 - Msaccess
 - SQL Server , use SQL as their database language
 - SQL allows users to query the database in a number of ways, using English statements.
 - RDBMS is for storing, querying, retrieving and managing data.
-
-# How database store data in a structure: 
+.........
+  
+## How database store data in a structure: 
 - create table which are composed of rows and columns, each table represent a specific type of data and each row or record in the table represents a single entry.
 
 The columns or field define the attributes of the data , such as a customer's name, age , or account number. Tables in database have rows and columns just like excel.
@@ -38,6 +40,7 @@ CREATE TABLE Students (
   Department VARCHAR(50),
   CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 ~~~
+..........
 
 ### Explanation 
 
@@ -51,7 +54,7 @@ CREATE TABLE Students (
 
  # TYPES OF COMMANDS
 
-## Five type of SQL commnads
+### Five type of SQL commnads
 
 - DDL;Data definition language_ is use to change the structure of the table.
 - DML:Data manipulation language_ use yo modify database 
@@ -63,18 +66,20 @@ CREATE TABLE Students (
   SELECT * FROM TABLE1
   WHERE CONDITION = TRUE
 ~~~
-  
+........
+
 # SQL Data types
 - Binary _ yes or no
 - Numeric _ is most widely used datatype in sql ; numeric value only.
 - Date or daytime _ are used to be stored in date.
-
+..........
 # SQL keys
 In sql keys are special field in a table that helps
 - create relationship between tables
 - mountain uniqueness
 - ensure data is consistent and valid
-
+............
+  
 # Databases keys
 
 - foreign key
@@ -86,9 +91,10 @@ In sql keys are special field in a table that helps
   primary key must be declare before execute ( syntax word is identity)
   Identity - Auto create increasing the primary key.
   decimal - is to store exact numerical value.
-
+...........
+  
   # GROUP BY`
-   is a clause used to:
+  is a clause used to:
 - Divide data into groups based on one or more columns.
 -  Aggregate data within each group.
 
@@ -132,6 +138,7 @@ In sql keys are special field in a table that helps
 | Sales | 50000 |
 | Marketing | 60000 |
 | IT | 70000 |
+........
 
 ### Having 
 
@@ -161,12 +168,13 @@ HAVING is a clause used to:
 `GROUP BY Department`
 `HAVING AVG(Salary) > 50000;`
 
-1. Find departments with > 5 employees:
+Find departments with > 5 employees:
 
 `SELECT Department, COUNT(*) AS EmployeeCount`
 `FROM Employees`
 `GROUP BY Department`
 `HAVING COUNT(*) > 5;
+.........
 
 ### order by 
 Ascending and descending order. 
@@ -179,8 +187,11 @@ execute all with duplicate
 
 ### comparison relation operator
 <= less than 
+
 >= greater than
+
 <> not equal
+...........
 
 ### To join table 
 Inner join 
@@ -188,8 +199,9 @@ Left join
 Right join 
 Full join 
 This has to do with joining multiple tables to return in a single columns. 
+...........
 
-### SQL view 
+# SQL view 
 
 virtual table, that is created based on the result set of a sql query. 
 
@@ -204,6 +216,7 @@ virtual table, that is created based on the result set of a sql query.
 `CREATE VIEW EmployeeInfo AS`
 `SELECT FirstName, LastName, Department`
 `FROM Employees;`
+..........
 
 ### CASE WHEN STATEMENT 
 
